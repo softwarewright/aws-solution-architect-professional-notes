@@ -342,3 +342,21 @@ Amazon Elasicache
 - [Deep Dive on Amazon Relational Database Service](https://www.youtube.com/watch?v=TJxC-B9Q9tQ)
 - [ElastiCache Deep Dive: Best Pratices and Usage Patterns](https://www.youtube.com/watch?v=_YYBdsuUq2M)
 - [Deep Dive: Using Hybrid Storage with AWS Storage Gateway](https://www.youtube.com/watch?v=9wgaV70FeaM)
+
+## Pro Tips
+
+- Archiving and Backup often a great "pilot" to build AWS business case
+- Make use of S3 endpoints withing your VPC
+- Learn how to properly secure your S3 Buckets
+- Encrypt, Encrypt, Encrypt
+
+- Consider Aurora for production needs
+- Consider NoSQL if you don't need relational database features
+- Database on EC2 costs less on the surface than RDS, but remember the costs of management (backups, patching, OS-level hardening)
+- There can be a performance hit when RDS does back ups and there RDS is single AZ
+
+## Challenge
+
+1. Identify an open source data repository for air quality readings
+2. Setup a way to query that data via AWS services and tools
+3. What City had the highest average ozone (O3) reading on October 9 2018
