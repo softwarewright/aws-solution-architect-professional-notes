@@ -340,7 +340,7 @@ Amazon Elasicache
 
 - [Amazon S3 & Amazon Glacier Storage Management](https://www.youtube.com/watch?v=SUWqDOnXeDw)
 - [Deep Dive on Amazon Relational Database Service](https://www.youtube.com/watch?v=TJxC-B9Q9tQ)
-- [ElastiCache Deep Dive: Best Pratices and Usage Patterns](https://www.youtube.com/watch?v=_YYBdsuUq2M)
+- [ElastiCache Deep Dive: Best Practices and Usage Patterns](https://www.youtube.com/watch?v=_YYBdsuUq2M)
 - [Deep Dive: Using Hybrid Storage with AWS Storage Gateway](https://www.youtube.com/watch?v=9wgaV70FeaM)
 
 ## Pro Tips
@@ -354,6 +354,10 @@ Amazon Elasicache
 - Consider NoSQL if you don't need relational database features
 - Database on EC2 costs less on the surface than RDS, but remember the costs of management (backups, patching, OS-level hardening)
 - There can be a performance hit when RDS does back ups and there RDS is single AZ
+
+## Additional Reading
+
+- [EFS Access](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html)
 
 ## Challenge
 
