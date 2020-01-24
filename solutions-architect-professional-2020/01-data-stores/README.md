@@ -165,7 +165,7 @@ Deleting in the middle is allowed, but you will not be able to restore that poin
 
 - File Gateway (NFS, SMB) - Allow on-prem or EC2 instances to store objects via NFS or SMB mount point
 - Volume Gateway Stored Mode / Gateway-stored Volumes (iSOSI) - Async replication of on-prem data to S3
-- Volume Gateway Cached Mode / Gateway Cached Volumes (iSCSI) - Primary Data stored in S# with frequently accessed data cached locally on-prem
+- Volume Gateway Cached Mode / Gateway Cached Volumes (iSCSI) - Primary Data stored in S3 with frequently accessed data cached locally on-prem
 - Tape Gateway / Gateway-Virtual Tape Library (iSCSI) - Virtual media changer and tape library for use with existing backup software
 
 ## WorkDocs (Think Google Docs)
