@@ -137,6 +137,7 @@ No matter what solution you choose remember that agility and ability adapt are t
 
 - [DynamoDB Sharding strategies](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-sharding.html)
 - [Dynamic DynamoDB (DynamoDB Autoscaling)](https://dynamic-dynamodb.readthedocs.io/en/latest/index.html)
+- [Redshift](https://aws.amazon.com/redshift/)
 - [Redshift Concurrency Scaling](https://aws.amazon.com/blogs/aws/new-concurrency-scaling-for-amazon-redshift-peak-performance-at-all-times/)
 
 ## Challenges
