@@ -127,9 +127,38 @@ Automatically encrypt every object written to the S3 Bucket
 
 Automatically discover, classify, and protect sensitive data in AWS.
 
+
+### Real Example
+
+- Guarantee end to end data integrity
+    - Send a 256 check sum to ensure
+- Encryption at rest
+- Expiration Policies and Storage Class Management to maintain costs
+- Multi-Region Data availability
+
+All of the things above needs to be fast
+
+Tools
+
+- S3 Object Tagging
+- S3 Lifecycle Expiration and Tiering
+- S3 Cross Region Replication
+- S3 Inventory
+- S3 VPC Endpoints
+- Glacier Expedited Retrieval
+- AWS KMS CMK Data Keys
+- IAM Cross-Account Roles
+
+
+
 ## Challenges
 
 - Setup S3 Inventory
     - Enable Amazon Athena querying
 - Investigate quicksight
 - Use S3 Events with SQS
+- Investigate KMS keys and generating them
+
+## Resources
+
+- [S3 Prefixes For Performance](https://aws.amazon.com/blogs/aws/amazon-s3-performance-tips-tricks-seattle-hiring-event/)

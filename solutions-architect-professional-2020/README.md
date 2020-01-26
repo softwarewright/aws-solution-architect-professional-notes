@@ -7,7 +7,7 @@
 
 ## Things to research
 
-- EC2 Instance Stores
+- Lambda Provisioned Concurrency
 
 ## Tips
 

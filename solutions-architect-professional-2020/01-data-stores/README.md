@@ -343,6 +343,9 @@ Amazon Elasicache
 - [ElastiCache Deep Dive: Best Practices and Usage Patterns](https://www.youtube.com/watch?v=_YYBdsuUq2M)
 - [Deep Dive: Using Hybrid Storage with AWS Storage Gateway](https://www.youtube.com/watch?v=9wgaV70FeaM)
 
+#### Bonus Videos
+- [Which Database to Use When](https://www.youtube.com/watch?v=KWOSGVtHWqA)
+
 ## Pro Tips
 
 - Archiving and Backup often a great "pilot" to build AWS business case
