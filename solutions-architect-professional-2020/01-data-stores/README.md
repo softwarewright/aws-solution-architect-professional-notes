@@ -361,6 +361,11 @@ Amazon Elasicache
 ## Additional Reading
 
 - [EFS Access](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html)
+- [Mounting EFS For High Availability](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html)
+
+Quiz Notes
+
+If you make a HEAD or GET request for the S3 key name before creating the object, S3 provides eventual consistency for read-after-write. As a result, we will get a 404 Not Found error until the upload is fully replicated. However, this replication usually only takes a few seconds and we might get the metadata after all. Further information: https://docs.aws.amazon.com/AmazonS3/latest/dev/Introduction.html
 
 ## Challenge
 
