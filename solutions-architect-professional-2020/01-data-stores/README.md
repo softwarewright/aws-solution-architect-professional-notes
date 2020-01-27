@@ -44,6 +44,7 @@ The "file path" of S3 is a key. It leans closer to a database rather than a file
 ### S3 consistency
 
 - read after write for PUTS of new objects, you can read the object right after you write it to S3
+    - There is a caveat if you attempt to request (GET/HEAD) the object before it exists then create it after, that read will be eventually consistent this is withing a few seconds
 - head and get requests of a key before an object exists will be eventually consistent. Until the object has been written you will not be able to read it, but once it has you will be able to.
 - eventual consistency on PUTs and DELETEs. The update or delete will happen locally, then the change will be replicated out, but until that is completed the old files will be served.
 - Updates to a single key are atomic. Only one update can be processed at time and will be processed in the order they were received.
