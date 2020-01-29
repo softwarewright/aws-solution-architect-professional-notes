@@ -250,10 +250,172 @@ Each route table contains a local route for the CIDR block. Most specific route 
 - Requried TCP port 179 + ephemeral ports
 - Autonomous system number ASN = unique endpoint identifier
 - Weighting is local to the router and higher weight is preferred path for outbound traffic
+### Route53
+
+Route53 allows you to register domain names, check the health of your domain services, and route internet traffic for your domain.
+
+#### Policies
+
+- Simple - Here's the destination for that name
+- Failover - Normally I would send you to the primary, but since it's failing health checks we will failover to the backup
+- Geolocation - Route to the resource closer to you in that region. Ensure that you have a default route for when AWS cannot determine where the use is coming from.
+- Geoproximity - Routes you to the closest region i.e. us-east-1. You are allowed to add bias to the route to increase the radius of the region.
+- Latency - Route the users through resources with the lowest latency. This is based between the latency between the user and the server.
+- Multivalue Answer - Returns several IP addresses, a basic load balancer. Where you have the same name pointed to multiple IP addresses.
+- Weighted - Route according the the percentage of weight assigned to each. The weights can be anywhere from 0 to 255, zero meaning that there is no traffic being directed to that route. Great for blue green deployments
+
+
+## Enhanced Networking
+
+Used for high performance computing use cases. 
+
+### Placement Groups
+
+Clustered - Instances are placed into a low latency group close together. Need low network latency throughput. Gets the most out of enhanced networking instances, these have a finite capacity. Therefore launch all you might need up front.
+
+Spread - Instances spread across underlying hardware, which reduces the risk of simultaneous failure. This can span multiple AZs, but there is a limit of 7 instances per group per AZ
+
+Partition - Instances are grouped into partitions are spread across racks. This reduces the risk of correlated hardware failure for multi-instance workloads. Better for large distributed or replicated workloads than spread. It does not support dedicated host.
+
+## CloudFront
+
+It's a CDN capable of streaming 4k video
+
+SNI Server Name Identification
+
+## Elastic Load Balancer
+
+- Distributes inbound connections to one or many backend endpoints
+- Options
+    - Application (Layer 7 - Application)
+    - Network (Layer 4 - TCP)
+    - Classic ( Layer 4 or 7) Discouraged from using
+- Used for public or private workloads
+- Consumes IP addresses within a VPC
+
+
+All of the Load Balancers
+
+- Zonal Failover
+- Health Checks
+- Cross-Zone Load Balancing
+- CloudWatch Metrics
+- SSL Offloading
+- Resource Based IAM permissions
+- TLS support
+
+The difference being Classic LB works with EC2 Classic
+
+### Application LB
+
+- Protocols - HTTP/HTTPS
+- Path/Host based routing
+- WebSockets
+- Server Name Indication
+- Sticky sessions - This is how the ELB can keep track of the client and which webserver they were communicating with along with their session information
+- User Authentication
+- While you cannot use an elastic IP, there is a fully qualified domain name that you can alias in route53
+
+#### Routing
+
+- Host based
+- Path Based
+- HTTP header based
+- HTTP method based
+- Query string parameter based
+- Source IP address CIDR based routing
+
+### Network LB
+
+If you just need raw speed then a network load balancer is for you.
+
+- Protocols - TCP, UDP, TLS
+- Websockets
+- Elastic IP and Static IP
+
+#### Routing
+
+- Route based on the given port number of a connection
+- TCP connections to backend are persisted for the duration of the connection
+
+### Classic LB
+
+- Protocols - TCP, SSL, HTTP, HTTPS
+- Sticky sessions
+
+## Exam Tips
+
+### VPCs
+
+- Know the pros and cons of each AWS connection mode
+- Know the functions of different VPC components
+    - Customer Gateway
+    - Virual Private Gateway
+- Know that direct connect is not inherently redundant, so know how to architect a network that is (VPN, secondary direct connect)
+- Multicast and Broadcast aren't supported in VPCs and why?
+- Know what stateless, stateful, connectionless, and connection based means in terms of IP protocols
+- Know what ephemeral ports are and why they might need to be in NACLs or SGs
+
+### Routing
+
+- Understand BGP and how to using weighting to shift traffic
+- Know how routes in a route table are prioritized (most specific first).
+- What other routing protocols does AWS support (none only BGP)
+
+### VPC Peering
+- CIDR ranges cannot overlap
+- After VPC owner accepts a peering request, routes must be added to the respective route tables
+- Transitive peering is not supported, but mesh or hub and spike architectures are with proper NACLs and routes
+- A Transit VPC is supported
+
+### Internet Gateways
+
+- Difference between NAT instance and gateway
+- IGW is horizontally scaled, redundant, with no bandwidth constraints
+- NATs do have bandwidth constraints but
+- VPCs can have multiple NATs across AZs and subnets for scale as long as routes are defined properly
+- Use Egress-Only Gateway for IPv6
+
+### Route53
+- Understand the different types of routing policies and use cases
+- Know the weighted routing formula
+- Route53 is a global service
+
+### CloudFront
+
+- Understand what must happen to use custom domain with CloudFront
+- Understand what SNI enables and the necessary alternative
+
+ELB
+- Know the different types of load balancers and at which OSI Layer they work
+- Understand which major features each deliver
+Know that sticky session are and when they come into play.
+
+## Protips
+
+- While Direct Connect be more complex and costly to setup it could save big on the bandwidth costs
+- Explicitly deny as much traffic as mock as you can with NACLs and SG - Principle of Least Privilege
+- Think through your VPC layout
+- You can use Route53 for your domain even if AWS is not your registrar
+ELBs provider a useful layer of abstraction
 
 ## Resources
 
 - [AWS Global Networks](https://www.youtube.com/watch?v=uj7Ting6Ckk)
+
+## Whitepapers
+
+- [Amazon Virtual Private Cloud
+Connectivity Options](https://d0.awsstatic.com/whitepapers/aws-amazon-vpc-connectivity-options.pdf)
+- [Integrating AWS with
+Multiprotocol Label Switching](https://d1.awsstatic.com/whitepapers/Networking/integrating-aws-with-multiprotocol-label-switching.pdf)
+- [AWS Security](https://docs.aws.amazon.com/security/)
+
+## Reinvent
+
+- [Networking Many VPCs](https://www.youtube.com/watch?v=KGKrVO9xlqI)
+- [A Billion Flows](https://www.youtube.com/watch?v=8gc2DgBqo9U)
+- [Deep Dive Network Load Balancer](https://www.youtube.com/watch?v=z0FBGIT1Ub4)
 
 ## Challenges
 
@@ -264,6 +426,8 @@ Each route table contains a local route for the CIDR block. Most specific route 
 - What are static routes?
 - What is MPLS?
 - What is ASN?
+- What is a DNS? What are the different record types?
+- Where does the name Route53 come from?
 - Why would you want to use OpenVPN on AWS?
 - How do you add OpenVPN on AWS?
 - More details about why you would want to do a transit VPC? How is Transit VPC used to connect to other cloud providers.
@@ -275,4 +439,6 @@ Each route table contains a local route for the CIDR block. Most specific route 
 - What is NAT? Network Address Translation.
 - What is Network Address Translation?
 - How do routing tables work?
-
+- Try the different Route53 routing schemes
+- How do you stream video from CloudFront?
+- What is user authentication with ALB?
