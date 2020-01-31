@@ -5,7 +5,8 @@ Should know before proceeding
 - Physical layout of AZs and regions
 - VPC concept and how to create
 - How to create private and public subnets
-- Know what a NAT is and what "Disable source/Destination Checks means"
+- Know what a NAT is and what "Disable Source/Destination Checks means"
+    - This means that the EC2 must be the source or the destination of traffic that it sends or receives. However in the case of a NAT instance the purpose of it is to send and receive traffic though the source and destination is not itself. Therefore you must disable source/destination checks.
 - Route table and routing terminology (default routes, local routes)
 - IPv4 Addressing and Subnet Mask Notation (/16, /24, etc)
 - Intermediate networking terminology (MAC address, port, gateway vs router)
@@ -399,10 +400,6 @@ Know that sticky session are and when they come into play.
 - You can use Route53 for your domain even if AWS is not your registrar
 ELBs provider a useful layer of abstraction
 
-## Resources
-
-- [AWS Global Networks](https://www.youtube.com/watch?v=uj7Ting6Ckk)
-
 ## Whitepapers
 
 - [Amazon Virtual Private Cloud
@@ -410,12 +407,17 @@ Connectivity Options](https://d0.awsstatic.com/whitepapers/aws-amazon-vpc-connec
 - [Integrating AWS with
 Multiprotocol Label Switching](https://d1.awsstatic.com/whitepapers/Networking/integrating-aws-with-multiprotocol-label-switching.pdf)
 - [AWS Security](https://docs.aws.amazon.com/security/)
-
+- [Security Best Practices for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html)
 ## Reinvent
 
 - [Networking Many VPCs](https://www.youtube.com/watch?v=KGKrVO9xlqI)
 - [A Billion Flows](https://www.youtube.com/watch?v=8gc2DgBqo9U)
 - [Deep Dive Network Load Balancer](https://www.youtube.com/watch?v=z0FBGIT1Ub4)
+
+## Resources
+
+- [AWS Global Networks](https://www.youtube.com/watch?v=uj7Ting6Ckk)
+- [NAT Instances](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html)
 
 ## Challenges
 
