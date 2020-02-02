@@ -1,5 +1,8 @@
 # Amazon Virtual Private Cloud Connectivity Options
 
+https://d1.awsstatic.com/whitepapers/Networking/integrating-aws-with-multiprotocol-label-switching.pdf
+
+
 ## User Network to Amazon VPC Connectivity Options
 
 This allows seamless connection to resources hosted on AWS. It's best that you ensure that there are no overlapping IP addresses with your network when connecting to a VPC. Thus you should ensure that you have a non overlapping CIDR block.
@@ -90,6 +93,8 @@ Advantages:
 Limitations:
 - VPC peering does not support transitive peering relationships
 
+Traffic through peering stays on the AWS backbone, thus preventing issues like DDoS attacks.
+
 ### Software VPN 
 
 User managed software appliance based VPN connections between AWS VPCs
@@ -102,6 +107,8 @@ Advantages:
 Limitations:
 - You are responsible for HA for all VPN endpoints
 - VPN instances can be a bottleneck
+
+This uses an IGW to facilitate the connection between the VPCs. This option is great if you need to manage the connection between VPCs
 
 ### AWS Managed VPN
 
@@ -141,9 +148,21 @@ Advantages:
 
 Limits:
 - May need additional telecom and hosting provider relationships
+
+This is great if you are already a direct connect customer. As it offers consistent networking the ability to connect multiple VPCs to your network.
+
 ### AWS PrivateLink
 
 Connection multiple VPCs leveraging VPC interface endpoints and VPC endpoint services
+
+Advantages:
+- Leverages AWS networking infrastructure
+- No single point of failure
+
+Limits:
+- VPC endpoint services are only available in AWS region in which they are created
+
+This is a great approach if you want to user services offered by another VPC securly over private connection. You can create an interface endpoint to keep all traffic within the AWS network
 
 ## Internal User to Amazon VPC Connectivity Options
 
