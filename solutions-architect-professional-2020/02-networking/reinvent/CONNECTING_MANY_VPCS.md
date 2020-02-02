@@ -34,6 +34,8 @@ Smaller VPCs or accounts - Infrastructure and Networking
 
 ### Transit VPC
 
+[AWS Transit Gateway](https://aws.amazon.com/blogs/networking-and-content-delivery/migrate-from-transit-vpc-to-aws-transit-gateway/) should be able to replace this entire architecture.
+
 - Centralization
 - Higher scale
 - Inter region connectivity
@@ -44,7 +46,7 @@ The Transit VPC Hub starts with your VPC and subnet in each availability zone. I
 
 Then create a VPN connection from each of the instances into the other VPC with BGP for dynamic routing. These connections will consist of two VPN tunnels.
 
-You will have the option to propagate routes from the VPN instance into different subnets. On each route table you have the option to propagate routes from the VGW (Virutal Private Gateway). This means VPN the IP will not change making this highly available. The VGW will advertise the VPC CIDR to the VPN instance.
+You will have the option to propagate routes from the VPN instance into different subnets. On each route table you have the option to propagate routes from the VGW (Virtual Private Gateway). This means VPN the IP will not change making this highly available. The VGW will advertise the VPC CIDR to the VPN instance.
 
 How does the above break?
 

@@ -381,6 +381,7 @@ If you just need raw speed then a network load balancer is for you.
 - Understand the different types of routing policies and use cases
 - Know the weighted routing formula
 - Route53 is a global service
+- https://aws.amazon.com/route53/faqs/
 
 ### CloudFront
 
@@ -421,6 +422,7 @@ Multiprotocol Label Switching](https://d1.awsstatic.com/whitepapers/Networking/i
 
 ## Challenges
 
+- What protocol does ping use? ICMP
 - What is hub and spoke?
 - What is AWS Virtual Private Gateway
 - What are BGP routes?
@@ -444,3 +446,15 @@ Multiprotocol Label Switching](https://d1.awsstatic.com/whitepapers/Networking/i
 - Try the different Route53 routing schemes
 - How do you stream video from CloudFront?
 - What is user authentication with ALB?
+- What is an Egress Only Internet Gateway for? It allows IPv6 based traffic within a VPC to access the internet while denying any internet based resources the possibility of connecting back into the VPC.
+- What is the supported Rotue53 record types?
+- What is the difference between SPF, AAAA, cname?
+- What is a DHCP Option Set? How can you use this to allow VPC instances to resolve using on-prem DNS?
+- Why do you need to allow outbound traffic for TCP ports between 1025 to 65535 for ssh instead of port 22? (Look up ephemeral ports)
+
+### Things to know
+
+- NAT Gateway and Instances explicitly do not support IPv6
+- Application Load Balancers can use static IPs when using [Global Accelerator](https://aws.amazon.com/global-accelerator/features/).
+- The largest CIDR range allowed for a VPC is /16.
+- [Direct Connection](https://docs.aws.amazon.com/directconnect/latest/UserGuide/getting_started.html)
