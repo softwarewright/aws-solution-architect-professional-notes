@@ -1,6 +1,6 @@
 # Security Best Practices for Your VPC
 
-https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-best-practices.html
+https://docs.aws.amazon.com/vpc/latest/userguide/security.html
 
 - Multiple AZ deployments for HA
 - Security Groups and NACLs
