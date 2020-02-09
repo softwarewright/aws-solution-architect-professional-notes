@@ -372,7 +372,7 @@ Service Catalog
 
 ## Reinvent
 
-- [Best Pratices for Managing Security Opetations on AWS](https://www.youtube.com/watch?v=gjrcoK8T3To)
+- [Best Practices for Managing Security Operations on AWS](https://www.youtube.com/watch?v=gjrcoK8T3To)
 - [IAM Policy Mastery in 60 mins or less](https://www.youtube.com/watch?v=YQsK4MtsELU)
 - [Security Anti-Patterns: Mistakes to avoid](https://www.youtube.com/watch?v=tzJmE_Jlas0)
 - [Architecting Security and Governance Across a Multi-Account Strategy](https://www.youtube.com/watch?v=71fD8Oenwxc)
