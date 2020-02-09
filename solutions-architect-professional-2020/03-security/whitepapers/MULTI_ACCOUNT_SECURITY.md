@@ -73,3 +73,4 @@ Generally used to host identity repositories (IAM, AWS Directory Service, etc.),
 - Setup centralized logging through Elasticsearch and just CloudWatch through to a central account
 
 - [ELK Stack](https://aws.amazon.com/elasticsearch-service/the-elk-stack/)
+- [Cross Account Subscriptions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CrossAccountSubscriptions.html)
