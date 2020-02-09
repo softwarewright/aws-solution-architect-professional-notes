@@ -365,10 +365,12 @@ Service Catalog
 
 ## Whitepapers
 
-- https://d1.awsstatic.com/whitepapers/Security/DDoS_White_Paper.pdf?did=wp_card&trk=wp_card
-- https://d1.awsstatic.com/aws-answers/AWS_Multi_Account_Security_Strategy.pdf
 - https://d1.awsstatic.com/whitepapers/Security/DDoS_White_Paper.pdf
-- https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc#security
+- https://d1.awsstatic.com/aws-answers/AWS_Multi_Account_Security_Strategy.pdf
+- https://d1.awsstatic.com/whitepapers/Security/Intro_to_AWS_Security.pdf?did=wp_card&trk=wp_card
+
+### Additional Whitepapers
+- https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc&awsf.whitepapers-content-type=content-type%23whitepaper&awsf.whitepapers-category=categories%23security-identity-compliance#security
 
 ## Reinvent
 
