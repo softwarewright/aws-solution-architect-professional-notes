@@ -370,7 +370,8 @@ Service Catalog
 - https://d1.awsstatic.com/whitepapers/Security/Intro_to_AWS_Security.pdf?did=wp_card&trk=wp_card
 
 ### Additional Whitepapers
-- https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc&awsf.whitepapers-content-type=content-type%23whitepaper&awsf.whitepapers-category=categories%23security-identity-compliance#security
+- [Security](https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc&awsf.whitepapers-content-type=content-type%23whitepaper&awsf.whitepapers-category=categories%23security-identity-compliance#security)
+- [AWS Governance at Scale](https://d1.awsstatic.com/whitepapers/Security/AWS_Governance_at_Scale.pdf?did=wp_card&trk=wp_card)
 
 ## Reinvent
 
@@ -379,6 +380,10 @@ Service Catalog
 - [Security Anti-Patterns: Mistakes to avoid](https://www.youtube.com/watch?v=tzJmE_Jlas0)
 - [Architecting Security and Governance Across a Multi-Account Strategy](https://www.youtube.com/watch?v=71fD8Oenwxc)
 - [Managing Multi-Account AWS Environments Using AWS Organizations](https://www.youtube.com/watch?v=fxo67UeeN1A)
+
+### Additonal Videos
+
+- [Using Analytics to set Access Controls](https://www.youtube.com/watch?v=6EIsRI4CD10)
 
 ## Challenge
 
