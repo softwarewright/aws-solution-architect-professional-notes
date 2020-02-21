@@ -1,5 +1,9 @@
 # AWS Migration Whitepaper
 
+https://d1.awsstatic.com/whitepapers/Migration/aws-migration-whitepaper.pdf
+
+**By the end of this your goal should go from when do we start the migration to lets start the migration now.**
+
 Figure out your organization's concerns up front.
 
 - How do I build the right business case?
@@ -219,9 +223,149 @@ Include people for across the impacted business segments, with cross-functional 
 There are two groups to the CCoE
 
 - The cloud business office - ensures cloud services meet the needs of your internal customer, business services.
-- Cloud Engineering
+- Cloud Engineering - Owns infrastructure automation, operational tools, processes, security tooling and tools, and migration landing zones. They optimize the speed at which a business unit can access cloud resources and optimize the use patterns.
+
+## Migration Readiness and Planning
+
+Tools, processes and best practices to prepare an enterprise for cloud migration.
+
+### Assessing Migration Readiness
+
+Things to consider
+
+- Is there clearly defined scope and the business case for migration
+- Have you evaluated the environment and application in scope through the lenses of the AWS CAF
+- Is your VPC secure and can it act as a landing zone for all applications in scope
+- Have your operations and employees skills been reviewed and updated to accommodate the change
+- Do you have the experience necessary to move tech stacks that are in scope.
+
+### Application Discovery
+
+- Use an automated discovery tool
+- Plan how to keep data current by continuously running your automated discovery tool
+- Do an initial application discovery during business case development to accurately reflect the scope
+
+### Discovery Tools 
+
+AWS Application Discovery Service
+
+An application discovery tool can:
+- Automatically discover the inventory of infrastructure and application running in your data center and maintain the inventory
+- Help determine how applications are dependent on each other or on underlying infrastructure
+- Inventory versions of operating systems and services for analysis and planning
+- Measure applications and processes running on hosts to determine performance baselines and optimization opportunities
+- Provider a means to categorize applications and servers and describe them in a way that's meaningful to the people who will be involved in the migration project
+
+### Application Portfolio Analysis
+
+The next step of grouping found applications based on patterns. The goal is data driven insights based on app discovery. You are looking for high level analysis across your applications.
+
+
+### Migration Planning 
+
+The goal is to manage scope, schedule, resource plan, issues and risks, coordination, and communication to all stakeholders. It's recommended to use agile practices to deliver on migration.
+
+Recommended migration plan activities:
+
+- review project management methods, tools, and capabilities to assess any gaps
+- Define project management methods and tools to be used during the migration
+- Define and create teh migration project charter/communication plan, including reporting and escalation procedures
+- Develop a project plan, risk/mitigation log, and roles and responsibilities matrix to manage the risks that occur during the project and identify 
+- Procure and deploy project management tools to support delivery of the project
+- Identify key resources and leads for each of the migration work streams defined in this section
+- Facilitate the coordination and activities outlined plan
+- Outline resources, timelines and cost to migrate the targeted environment to AWS
+
+### Technical Planning
+
+Utilize a small team (enterprise architecture) to prioritize the portfolio that you have developed. It's recommended to use agile practices, do deep analysis of the first couple of apps and then begin migration. Then move to deep analysis of the next apps while the first are being migrated. 
+
+### VPC Environment
+
+#### Security
+
+Security Perspective:
+
+Core security themes
+
+1. Identity and Access Management
+2. Logging and Monitoring
+3. Infrastructure Security
+4. Data Protection
+5. Incident Response
+
+Augmenting Security Themes
+
+1. Resilience
+2. Compliance Validation
+3. Secure CI/CD
+4. Configuration and Vulnerability analysis
+5. Security Big Data Analysis
+
+### Platform
+
+Key elements of the platform work stream:
+
+AWS landing zone - providers initial structure and pre-defined configurations for AWS accounts, networks, identity and billing frameworks, and customer selectable optional packages
+
+Account Structure - defines an initial multi account structure and pre-configured baseline security that can be easily adopted into your org model
+
+Network Structure - baseline network config that supports most common patterns for network isolation, implements baseline network connectivity between AWS and on-prem networks, and provides user-configurable options for network access and administration.
+
+Pre-defined identity and billing frameworks - provide frameworks for cross account user identity and access management and centralized cost management and reporting.
+
+Pre-defined user-selectable packages - provides a series of user selectable packages to integrate AWS-related logs into popular reporting tools, integrate with the AWS Service Catalog, and automate infrastructure. 
+
+## Migrating
+
+### First migrations - Build Experience
+
+Develop migration skills and experience early to help develop more informed decisions while migrating more workloads into AWS.
+
+The goal is to build confidence and experience, identify patterns, and create common processes for performing migrations.
+
+Move 3 to 5 applications.
+
+### Migration Execution
+
+Now scale teams to support the initial wave of migrations. These teams should be operating in tandem.
+
+### Application Migration Process
+
+ - Discover - portfolio analysis and backlog planning to understand the current and future architectures. 
+ - Design - The target state is developed and documented. This includes AWS architecture, application architecture, and supporting operational components and processes. This is done using information from the discovery phase.
+ - Build - migration design created during the design stage is executed. Assert basic validations against the AWS application.
+ - Integrate - Make external connections for the application. Running the application should demonstrate functionality and operation before the application is ready for the validate stage.
+ - Validate - Put the application through a series of tests (build verification, functional, performance, disaster recovery, and business continuity) before finalized and released for cutover.
+ - Cutover - perform user acceptance testing, and then execute the cutover plan. Ensure that there is an outlined rollback procedure in the plan in case migration is not successful.
+
+### Team Models
+
+- Cloud Business Office - Drives the program, manages resources and budgets, manages and report risk and drives communication and change management.
+- Cloud Engineering and Operations - Builds and validates the fundamental components that ensure development, test, and production environments are scalable, automated, maintained and monitored. Also prepares landing zones as needed.
+- Innovation - Develops repeatable solutions that will expedite migration in coordination with the platform engineering, migration, and transition teams.
+- Portfolio Discovery and Planning - Accelerates downstream activities by executing application discovery and optimizing application backlogs. They work to eliminate objects and minimize wasted effort.
+
+
+### Migration Factory Teams
+
+- Re-host migration team - migrates high-volume, low-complexity applications that don't need material change. Can use migration automation tools to simplify.
+
+- Re-platform migration team - designs and migrates applications that need a change of platform or a repeatable change in application architecture.
+
+- Re-factor/re-architect migration team - designs and migrates complex or core business applications that have many dependencies. Migration becomes release cycle(s) within the plan.
 
 ## Tools
 
 - [AWS Monthly Calculator](https://calculator.s3.amazonaws.com/index.html)
 - [AWS TCO Calculator](https://aws.amazon.com/tco-calculator/)
+- AWS CAF 
+- AWS Migration Readiness Assessment
+
+## Challenge
+- What are application discovery tools available
+
+## Resources:
+
+[AWS Operations Whitepapers](https://aws.amazon.com/whitepapers/#operations)
+[AWS Managed Services](https://aws.amazon.com/managed-services/features/)
