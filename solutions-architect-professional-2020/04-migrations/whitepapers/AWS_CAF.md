@@ -104,3 +104,47 @@ Business Performance Measurement - Ability to measure and optimize processes in 
 License Management - Ability to procure, distribute, and manage the licenses needed for IT systems, services and software.
 
 ### Platform: Applications and Infrastructure
+
+Compute Provisioning - Focusing on automating provisioning cloud services for enterprise application requires different skills from those required in provisioning physical hardware.
+
+Network Provisioning - Providing compute networks for enterprise architectures. This change requires new skills and processes to design, implement, and mangage the transition.
+
+Storage Provisioning - Providing the enterprise with file and block storage over SAN, NAS, and disk drives.
+
+Database Provisioning - Providing database and database management systems at enterprise scale.
+
+Systems and Solution Architecture - The capability to define and describe the design of systems. Develop new skills to codify architectures and develop new processes for workload optimizations.
+
+Application Development - Skills in CI/CD are necessary for designing applications that take advantage of cloud services and agility.
+
+### Security: Risk and Compliance
+
+Identity and Access Management - Handling access and control within the account. The privileges must be given to the user before they can do anything.
+
+Detective Control - Logging across the system on actions taken and resources within the account. This includes centralized logging as well and monitoring solutions to get full visibility into your systems.
+
+Infrastructure Security - Automate the build, deployment, and operation of security infrastructure. Update skills as new features are available within AWS.
+
+Data Protection - Control how data is accessed and used within the organization.
+
+Incident Response - The capability to respond, manage, reduce harm, and restore operations during and after an incident. Automate incident response and recovery and mitigate portions of disaster recovery. Ensure that there is a focus on root cause analysis.
+
+### Operations: Manage and Scale
+
+Enabling running, use, operations, and recovery of IT workloads to levels agreed to by business stakeholders.
+
+
+Service Monitoring - Ability to detect and respond to issues with the health of IT services and enterprise applications. Detection of application health should be a highly automated.
+
+Application Performance Monitoring - Ability to ensure application performance meets its defined requirements. Take full advantage of monitoring resources to understand sizing.
+
+Resource Inventory Management - Simply management of software through on-demand techniques optimizing license usage. 
+
+Release Management / Change Management - Ability to manage, plan, and schedule changes in the IT environment. Take advantage of the CI/CD that the cloud offers with releases and rollbacks.
+
+Reporting and Analytics - Ensuring compliance, ongoing analysis and reporting of performance against key KPIs such as SLAs and operational level agreements. There should be high level of granularity in reporting and analytics.
+
+Business Continuity / Disaster Recovery - Ability to operate in the event of a significant failure of IT services. In addition recover from those failures within the time of parameters defined by the organization.
+
+IT Service Catalog - The organization's ability to select maintain, advertise, and deliver an SLA or set of IT services.
+
