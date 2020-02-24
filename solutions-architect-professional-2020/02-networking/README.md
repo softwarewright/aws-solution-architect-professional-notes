@@ -419,7 +419,8 @@ Multiprotocol Label Switching](https://d1.awsstatic.com/whitepapers/Networking/i
 
 - [AWS Global Networks](https://www.youtube.com/watch?v=uj7Ting6Ckk)
 - [NAT Instances](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html)
--[AWS Direct Connect and VPNs](https://www.youtube.com/watch?v=SMvom9QjkPk)
+- [AWS Direct Connect and VPNs](https://www.youtube.com/watch?v=SMvom9QjkPk)
+
 ## Challenges
 
 - What protocol does ping use? ICMP
