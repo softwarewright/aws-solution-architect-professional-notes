@@ -148,7 +148,6 @@ Network Migration and Cutover
 
 - [Assessing Migration Readiness](https://www.youtube.com/watch?v=id-PY0GBHXA)
 - [Migrating Databases and Data Warehouses to the Cloud](https://www.youtube.com/watch?v=Y33TviLMBFY)
-- [Using Hybrid Storage with AWS Storage Gateway](https://www.youtube.com/watch?v=9wgaV70FeaM)
 
 ## Challenges
 
