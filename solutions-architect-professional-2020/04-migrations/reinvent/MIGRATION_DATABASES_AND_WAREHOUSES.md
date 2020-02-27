@@ -52,7 +52,7 @@ You can migrate between database i.e. Aurora -> MySQL and back again. It really 
 
 Moving to AWS native solutions is free.
 
-Recommended that you only move 15 TB over the internet a most.
+Recommended that you only move 15 TB over the internet a most, generally stick to 5 TB.
 
 ## Migration process
 
@@ -73,11 +73,20 @@ Or choose what you want from the database
 
 You can also connect to S3.
 
+You can create DMS tasks from the SCT tool.
+
+With DMS you can do AOT assessment to proves that data types are going to work when switching between databases.
+
+Database conversion is a project so it will never just be click button.
 
 
 ## Challenge
 
 - Run the SCT locally 
+- Figure out why Redshift cannot be a source
+- Find swing bench alternatives
+- DMS supported targets
+- What DMS targets are free to migrate to?
 
 ## Resources
 
