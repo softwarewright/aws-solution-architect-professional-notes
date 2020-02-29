@@ -267,7 +267,7 @@ Hadoop map reduce + Hadoop HDFS
 
 An example of when to use this is if you wanted to collect all of your logs, and scan them for anomalies.
 
-## Tips
+## Exam Tips
 
 Auto Scaling Groups:
 - Know the different scaling options and policies
@@ -333,6 +333,14 @@ Auto Scaling
 - Know the different scaling options and policies
 - Understand the difference and limitations between horizontal vs vertical scaling
 - Know what a cooldown period is and how it affects responsiveness to demand.
+
+## Pro Tips
+
+- Elasticity will drive most benefit from the cloud
+- Think Cloud-First designs if your in a green field scenario even if you're deploy on-prem
+- If you're in a "Brown field" situation, create roadmaps for cloud-first enablers like distributed applications, federated data and SOA
+- Be careful not to let elasticity cover for poor dev methods
+- Microservice concepts help achieve scalability via decoupling simplification and separation of concerns
 
 ## Whitepapers
 
