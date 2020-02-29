@@ -176,6 +176,183 @@ Queues create loosely coupled architecture.
 - Use SQS if you are creating a new app from scratch
 - Use MQ if you want low hassle free migration from on prem queues
 
+## Serverless + Lambda
+
+### Lambda
+
+- Allows on demand code without infrastructure
+- Supports Node.js Python, Java, Go, and C#
+- Code is stateless and executed on event basis (SNS, SQS, S3, DynamoDB Streams)
+- No limits to scaling a function since AWS dynamically allocates capacity
+
+### Lambda at Scale
+
+Commonly used for fan-out architecture. 
+
+### AWS Serverless Application Model
+
+- Open source framework for building serverless apps on AWS
+- Uses YAML as the configuration language
+- Includes AWS CLI-like functionality
+- Enables local testing and debugging of apps using lambda-like emulator via docker
+- Extension of CloudFormation so you can use everything CloudFormation can provide by way of resources and functions.
+
+### Amazon EventBridge
+
+- Designed to link variety of AWS and 3rd party apps to rules logic  for launching other event-based actions 
+
+An example would be if someone creates a JIRA ticket you can trigger a lambda function to execute logic.
+
+## Simple Workflow Service (AWS SWF)
+
+A managed status tracker.
+
+- Create distributed async systems as workflows
+- Supports both sequential and parallel processing
+- Tracks the state of your workflow which you interact and update via API
+- Best suited for human-enabled workflows like an order fulfillment or procedural requests.
+- AWS recommends new applications - look at step functions over SWF.
+
+### The Two pieces to SWF
+
+Activity Worker - program that interacts wih the AWS SWF service to get tasks, process tasks, and return results.
+
+Decider - A program that controls coordination of tasks such as their ordering, concurrency and scheduling.
+
+The activity workers use long polling to see if there is any work that they need to do.
+
+## AWS Step Functions
+
+- Managed workflow and orchestration platform
+- Scalable and highly available
+- Define your app as a state machine
+- Create tasks, sequential steps, parallel steps, branching paths or timers.
+- This is written in Amazon State Language declarative JSON
+- Apps can interactve and update the stream via Step function API
+- Visual interface describes flow and realtime status
+- Detailed logs of each step execution
+
+Think of them in terms of a finite state machine.
+
+## AWS Batch
+
+Management tool for creating, managing and executing batch oriented tasks using EC2 instances
+
+1. Cerate Compute Environment: Managed/Unmanaged, Spot/On-Demand, and CPU
+2. Create a Job Queue with priority and assigned to a compute environment
+3. Creation Job Definition: Script or JSON, environment variables, mount points, IAM role, container image, etc.
+4. Schedule the Job
+
+
+## Comparisons
+
+Step functions - out of the box coordination of AWS service components
+
+Simple Workflow Service - Need to support external processes or specialized execution logic. Good for manual intervention. Lean towards Step functions.
+
+Simple Queue Service - Messaging Queue; Store and word patterns. Image resize process
+
+AWS Batch Scheduled or reoccurring tasks that do not require heavy logic. Rotate logic daily.
+
+
+## ElasticMap Reduce
+
+Hadoop map reduce + Hadoop HDFS
+
+- Managed Hadoop framework for processing huge amounts of data
+- Also supports Apache Spark, HBase, Presto and Flink
+- Most commonly used for log analysis, financial analysis or extract, translate and loading (ETL) activities
+- A Step is a programmatic task for performing some process on the data (i.e. count words)
+- A Cluster is a collection of EC2 instances provisioned by EMR to run your Steps.
+
+An example of when to use this is if you wanted to collect all of your logs, and scan them for anomalies.
+
+## Tips
+
+Auto Scaling Groups:
+- Know the different scaling options and policies
+- Understand the difference and limitations between horizontal and vertical scaling
+- Know what a cool down period is and how it might impact your responsiveness to demand. How is it different from a health check grace period.
+
+Kinesis:
+
+- Exam is likely to be just Data Stream use cases such as Data Streams and Firehose
+- Understand shard concept and how partition keys and sequences enabled shards to manage data flow.
+
+DynamoDB auto scaling:
+
+- Know the new and old terminology and concept of a partition, partition key and sort key in context of DynamoDB
+- Understand how DynamoDB calculates total partitions and allocates RCU and WCU across available partitions.
+- Conceptually know how data is stored across partitions.
+
+CloudFront
+- Both static and dynamic content is supported
+- Understand possible origins and how multiple origins can be used together with behaviors
+- Know invalidation methods, zone apex and geo-restriction options
+
+SNS:
+- understand a loosely coupled architecture and benefits it brings
+- Know different types of subscription endpoints supported.
+
+SQS:
+
+- Know the difference between Standard and FIFO queues
+- Know the difference between Pub/Sub (SNS) and Message queueing (SQS) architecture
+
+Lambda:
+- Know what "Serverless" is in concept and how lambda can facilitate such an architecture
+- Know the languages supported by lambda
+
+SWF:
+- Understand the difference and functions of a worker and a decider
+- Best suited for human-enabled workflows like order fulfillment or procedural requests
+
+Elastic MapReduce
+- Understand the parts of a Hadoop landscape at a high level
+- Know what a cluster is and what Steps are
+- Understand the roles of a master node, core node, and task nodes
+
+Step Functions
+- Managed workflow and orchestration platform considered the preferred for modern development over AWS simple workflow service
+- Supports tasks sequential steps, parallel steps, branching, timers
+
+AWS Batch
+- Ideal for use cases where a routine activity must be performed at a specific interval or time of day
+- Behind the scenes, EC2 instances are provisioned as workers to perform the batch activities then terminate when done
+
+Serverless Application Model
+- Open source framework created to make serverless application development and development more efficient
+- SAM CLI translates specific SAM YAML into CloudFormation scripts which is then used to deploy on AWS 
+- Know that AWS SAM and the **Serverless Framework** are different things
+
+Auto Scaling
+- Know the different purposes of 
+    - EC2 Auto Scaling
+    - Application Auto Scaling
+    - AWS Auto Scaling
+- Know the different scaling options and policies
+- Understand the difference and limitations between horizontal vs vertical scaling
+- Know what a cooldown period is and how it affects responsiveness to demand.
+
+## Whitepapers
+
+- [Web Application Hosting in the
+AWS Cloud](https://d1.awsstatic.com/whitepapers/aws-web-hosting-best-practices.pdf)
+- [Introduction to Scalable
+Gaming Patterns on AWS](https://d0.awsstatic.com/whitepapers/aws-scalable-gaming-patterns.pdf)
+- [Performance at Scale with
+Amazon ElastiCache
+](https://d0.awsstatic.com/whitepapers/performance-at-scale-with-amazon-elasticache.pdf)
+- [Automating Elasticity](https://d1.awsstatic.com/whitepapers/cost-optimization-automating-elasticity.pdf)
+- [AWS Well-Architected Framework](https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf)
+- [Implementing Microservices
+on AWS](https://d1.awsstatic.com/whitepapers/microservices-on-aws.pdf)
+
+## Reinvent
+
+- [Scaling Up to Your First 10 Million Users](https://www.youtube.com/watch?v=w95murBkYmU)
+- [Learn to Build a Cloud-Scale WordPress Site That Can Keep Up](https://www.youtube.com/watch?v=dPdac4LL884)
+- [Elastic Load Balancing Deep Dive and Best Practices](https://www.youtube.com/watch?v=9TwkMMogojY)
 
 ## Challenges
 
@@ -190,3 +367,7 @@ Queues create loosely coupled architecture.
     - Data Streams
     - Firehose
 - Implement Fan Out Architecture with SNS
+- [Amazon Event Bridge](https://aws.amazon.com/eventbridge/)
+- [AWS SWF](https://aws.amazon.com/swf/)
+- [AWS Step Functions](https://aws.amazon.com/step-functions/)
+- [AWS Batch](https://aws.amazon.com/batch/)
