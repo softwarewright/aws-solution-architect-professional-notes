@@ -348,9 +348,6 @@ Auto Scaling
 AWS Cloud](https://d1.awsstatic.com/whitepapers/aws-web-hosting-best-practices.pdf)
 - [Introduction to Scalable
 Gaming Patterns on AWS](https://d0.awsstatic.com/whitepapers/aws-scalable-gaming-patterns.pdf)
-- [Performance at Scale with
-Amazon ElastiCache
-](https://d0.awsstatic.com/whitepapers/performance-at-scale-with-amazon-elasticache.pdf)
 - [Automating Elasticity](https://d1.awsstatic.com/whitepapers/cost-optimization-automating-elasticity.pdf)
 - [AWS Well-Architected Framework](https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf)
 - [Implementing Microservices

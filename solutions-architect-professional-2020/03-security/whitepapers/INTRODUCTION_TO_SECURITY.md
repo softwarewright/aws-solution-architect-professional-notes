@@ -68,8 +68,6 @@ These tools reduce the effort needed to perform audits since these tasks become 
 ## Resources
 
 - [AWS Security Documentation](https://docs.aws.amazon.com/security/)
-- [AWS Well-Architected Framework](https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf)
 - [AWS Well Architected Tool](https://aws.amazon.com/well-architected-tool/)
 - [AWS SSO](https://aws.amazon.com/single-sign-on/)
-- [AWS Cloud Adoption Framework](https://d1.awsstatic.com/whitepapers/aws_cloud_adoption_framework.pdf)
 - [AWS Security Best Practices](https://d1.awsstatic.com/whitepapers/Security/AWS_Security_Best_Practices.pdf)
