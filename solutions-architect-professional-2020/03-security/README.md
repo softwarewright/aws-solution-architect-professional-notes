@@ -372,6 +372,12 @@ Service Catalog
 ### Additional Whitepapers
 - [Security](https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc&awsf.whitepapers-content-type=content-type%23whitepaper&awsf.whitepapers-category=categories%23security-identity-compliance#security)
 - [AWS Governance at Scale](https://d1.awsstatic.com/whitepapers/Security/AWS_Governance_at_Scale.pdf?did=wp_card&trk=wp_card)
+- [AWS Cloud Security](https://aws.amazon.com/security/?ref=wellarchitected-wp)
+- [AWS Security Pillar](https://d0.awsstatic.com/whitepapers/architecture/AWS-Security-Pillar.pdf?ref=wellarchitected-wp)
+- [AWS Compliance](https://aws.amazon.com/compliance/?ref=wellarchitected-wp)
+- [AWS Security Whitepaper](https://d0.awsstatic.com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf?ref=wellarchitected-wp)
+- [AWS Security Best Practices](https://d1.awsstatic.com/whitepapers/Security/AWS_Security_Best_Practices.pdf)
+- [AWS Risk and Compliance](https://d0.awsstatic.com/whitepapers/compliance/AWS_Risk_and_Compliance_Whitepaper.pdf?ref=wellarchitected-wp)
 
 ## Reinvent
 
@@ -381,7 +387,7 @@ Service Catalog
 - [Architecting Security and Governance Across a Multi-Account Strategy](https://www.youtube.com/watch?v=71fD8Oenwxc)
 - [Managing Multi-Account AWS Environments Using AWS Organizations](https://www.youtube.com/watch?v=fxo67UeeN1A)
 
-### Additonal Videos
+### Additional Videos
 
 - [Using Analytics to set Access Controls](https://www.youtube.com/watch?v=6EIsRI4CD10)
 
