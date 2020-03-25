@@ -244,7 +244,7 @@ The advantages of storing on S3 vs in a database is the following:
 
 - Storing binary data in a DB is memory/disk intensive consuming valuable query resources
 - Clients can directly download the content from S3 using HTTP/S get
-- Designed for 99.99999999999% durability and 99.99% availability of objects over a year.
+- Designed for 99.999999999% durability and 99.99% availability of objects over a year.
 - S3 supports ETag (allows caches to be more efficient), authentication and signed urls
 - S3 plugs into CloudFront for distributing content to large numbers of clients
 
