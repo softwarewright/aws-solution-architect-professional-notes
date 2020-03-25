@@ -1,6 +1,6 @@
 # An Overview of the AWS Cloud Adoption Framework
 
-https://d1.awsstatic.com/whitepapers/aws_cloud_adoption_framework.pdf5
+https://d1.awsstatic.com/whitepapers/aws_cloud_adoption_framework.pdf
 
 ## The Six Perspectives
 
